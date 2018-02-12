@@ -8,24 +8,27 @@ public class LinearArray {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int[] linearArray = new int[n];
-        int maximum=linearArray[0] + linearArray[n-1];
         int i, j = n;
 
         if (n % 2 == 0) {
 
             for (i = 0; i < linearArray.length; i++) {
-                linearArray[i] = (int) (Math.random() * n);
+                linearArray[i] = (int) (Math.random() * n*100);
                 System.out.println("a(" + i + ")=" + linearArray[i]);
             }
 
-            for (i=1, j=n-1; i<linearArray.length; i++, j--) {
+            int maximum=linearArray[0] + linearArray[n-1];
+
+            for (i=1, j=n-1; i<linearArray.length/2; i++, j--) {
 
                 if (maximum <= linearArray[i] + linearArray[j - 1]) {
                     maximum = linearArray[i] + linearArray[j - 1];
                 }
             } System.out.println("Max sum is "+maximum);
 
-        } else System.out.println("Incorrect array size!");
+        } else {
+            System.out.println("Incorrect array size!");
+        }
     }
 }
 
