@@ -13,17 +13,17 @@ public class Cycle {
         System.out.print("3. The log h=");
         double h=in.nextDouble();
 
-        double x, F;
+        double x, f;
         x=a;
 
-        if (a<b) {
+        if (a<b && h>0 && h<b) {
             System.out.println("x"+"           "+"F");
-            while (x<=b) {
-                F = Math.tan(2 * x) - 3;
-                System.out.println(+x + "       " +F);
-                x = x + h;
+            for (;x<=b;) {
+                f = Math.tan(2 * x) - 3;
+                System.out.println(+x + "       " +f);
+                x += h;
             }
-        } else System.out.println("Incorrect parameters: a > b");
+        } else System.out.println("Incorrect parameters!");
     }
 }
 

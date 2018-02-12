@@ -4,9 +4,18 @@ public class Sequence {
 
     public static void main(String[] args) {
 
-        double a, epsilon = 1E-6;
+        double a=0.25, epsilon = 1E-6;
+        int i=1;
 
-        for (int i = 1; ; i++) {
+        while (a>=epsilon){
+            int base=i+1, power=2;
+            a = 1 / Math.pow(base, power);
+            System.out.println("a("+i+")="+a);
+            i++;
+        }
+        System.out.println("for condition (a < epsilon), a=" + a + ", " + "i=" + (i-1));
+
+        /*for (int i = 1; ; i++) {
 
            int base=i+1, power=2;
            a = 1 / Math.pow(base, power);
@@ -17,7 +26,7 @@ public class Sequence {
             }
 
             System.out.println("a("+i+")="+a);
-        }
+        }*/
     }
 }
 
