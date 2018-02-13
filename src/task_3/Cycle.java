@@ -14,18 +14,20 @@ public class Cycle {
         double h=in.nextDouble();
 
         double x, f;
-        x=a;
 
         if (a<b && h>0 && h<b) {
-            System.out.println("x"+"           "+"F");
-            for (;x<=b;) {
+            System.out.println("x"+"\t"+"\t"+"F");
+            for (x=a;x<=b;) {
                 f = Math.tan(2 * x) - 3;
-                System.out.println(+x + "       " +f);
+                System.out.println(+x +"\t"+f);
                 x += h;
             }
-        } else System.out.println("Incorrect parameters!");
+        } else {
+            System.out.println("Incorrect parameters!");
+        }
     }
 }
+
 
 
 

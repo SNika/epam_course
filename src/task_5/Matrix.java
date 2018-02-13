@@ -4,11 +4,18 @@ import java.util.Scanner;
 public class Matrix {
     public static void main(String[] args) {
 
-        try {
-
             System.out.print("Enter a matrix size: ");
             Scanner in = new Scanner(System.in);
-            int n = in.nextInt();
+            int n;
+
+        do {
+            while (!in.hasNextInt()) {
+                System.out.println("That not a number!");
+                in.next();
+            }
+            System.out.println("Please enter a positive number!");
+            n = in.nextInt();
+        } while (n <= 0);
 
             int[][] matrix = new int[n][n];
 
@@ -20,10 +27,7 @@ public class Matrix {
                 }
                 System.out.println();
             }
-        }catch (Exception ex){
-            System.out.println(ex.toString());
         }
     }
-}
 
 
