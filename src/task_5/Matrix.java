@@ -6,16 +6,13 @@ public class Matrix {
 
             System.out.print("Enter a matrix size: ");
             Scanner in = new Scanner(System.in);
-            int n;
+            int n=in.nextInt();
 
-        do {
-            while (!in.hasNextInt()) {
-                System.out.println("That not a number!");
-                in.next();
-            }
+
+        while (n<=0){
             System.out.println("Please enter a positive number!");
-            n = in.nextInt();
-        } while (n <= 0);
+            n=in.nextInt();
+        }
 
             int[][] matrix = new int[n][n];
 

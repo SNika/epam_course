@@ -16,11 +16,10 @@ public class Cycle {
         double x, f;
 
         if (a<b && h>0 && h<b) {
-            System.out.println("x"+"\t"+"\t"+"F");
-            for (x=a;x<=b;) {
+            System.out.println("x \t F");
+            for (x=a; x<=b; x += h) {
                 f = Math.tan(2 * x) - 3;
                 System.out.println(+x +"\t"+f);
-                x += h;
             }
         } else {
             System.out.println("Incorrect parameters!");
