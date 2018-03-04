@@ -13,17 +13,19 @@ public class Notes{
         public void addNote(String str) {
             int i = 0;
 
-            for (; i < notes.length; i++) {
-                if (notes[i] == null) {
-                    notes[i] = str;
-                    break;
-                } else if (notes[arraySize - 1] != null) {
-                    notes = Arrays.copyOf(notes, notes.length * 2);
-                    notes[arraySize+i]=str;
-                    break;
+                    for (; i < notes.length; i++) {
+                        if (notes[i] == null) {
+                            notes[i] = str;
+                            break;
+                        } else if (notes[arraySize - 1] != null) {
+                            notes = Arrays.copyOf(notes, notes.length * 2);
+                            notes[arraySize+i]=str;
+                            break;
+                        }
+                    }
                 }
-            }
-        }
+
+
 
         public void showNotes() {
             for (int i = 0; i < notes.length; i++) {
