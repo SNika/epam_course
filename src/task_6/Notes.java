@@ -17,7 +17,7 @@ public class Notes{
                         if (notes[i] == null) {
                             notes[i] = str;
                             break;
-                        } else if (notes[arraySize - 1] != null) {
+                        } else if (notes[arraySize - 1] != null) {//как изменить цикл???
                             notes = Arrays.copyOf(notes, notes.length * 2);
                             notes[arraySize+i]=str;
                             break;
