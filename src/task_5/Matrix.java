@@ -8,13 +8,13 @@ public class Matrix {
             Scanner in = new Scanner(System.in);
             int n=in.nextInt();
 
-
         while (n<=0){
             System.out.println("Please enter a positive number!");
             n=in.nextInt();
         }
 
             int[][] matrix = new int[n][n];
+
 
             for (int i = 0; i < matrix.length; i++) {
                 for (int j = 0, m = n - 1; j < matrix.length; j++, m--) {
