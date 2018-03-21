@@ -1,4 +1,4 @@
-package task_5;
+package main.java.resources.HomeWork1.task_5;
 import java.util.Scanner;
 
 public class Matrix {
