@@ -10,12 +10,12 @@ abstract class MusicalInstruments{
         System.out.println("The color is "+color);
     }
 
-    abstract void sound();
+    abstract String sound();
 
-    private void description(){ //инкапсуляция
-        System.out.println("A musical instrument is an instrument created or adapted to make musical sounds. " +
-                "In principle, any object that produces sound can be considered a musical instrument—" +
-                "it is through purpose that the object becomes a musical instrument");
+    abstract String description();
+
+    public int price(int price){
+        return price;
     }
 
 }
@@ -26,12 +26,17 @@ class StringedInstruments extends MusicalInstruments{ //наследование
         System.out.print("Stringed instruments → ");
     }
 
-    StringedInstruments(String color) {
+    public StringedInstruments(String color) {
         super(color);
     }
 
-    void sound() {
-        System.out.println("Melody: Trinnn");
+    public String sound() {
+        return "Trinnn";
+    }
+
+    @Override
+    String description() {
+        return null;
     }
 
 }
@@ -47,8 +52,15 @@ class Guitar extends StringedInstruments{ //наследование
     }
 
     @Override
-    void sound() { //полиморфизм
-        System.out.println("Melody: Trin-trin-trin");
+    public String sound() { //полиморфизм
+        return "Trin-trin-trin";
+    }
+
+    private String defenition="The guitar is a fretted musical instrument that usually has six strings."; //инкапсуляция
+
+    @Override
+    public String description(){
+        return this.defenition;
     }
 
 }
@@ -63,8 +75,16 @@ class DrumsInstruments extends MusicalInstruments{ //наследование
         super("green");
     }
 
-    void sound() {
-        System.out.println("Melody: Bammm");
+    public String sound() {
+        return "Bammm";
+    }
+
+    private String definition="Drums are the world's oldest and most ubiquitous musical instruments, " +
+            "and the basic design has remained virtually unchanged for thousands of years."; //инкапсуляция
+
+    @Override
+    String description() {
+        return this.definition;
     }
 
 }
@@ -85,8 +105,12 @@ class Drum extends DrumsInstruments{//наследование
 class Main{
     public static void main (String [] args){
         Guitar guitar=new Guitar("blue");
+        guitar.description();
         guitar.sound();
+        guitar.price(200);
         MusicalInstruments drum=new Drum("white");
+        drum.description();
         drum.sound();
+        drum.price(500);
     }
 }
