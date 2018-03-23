@@ -1,4 +1,4 @@
-package task_3;
+package main.java.resources.HomeWork1.task_3;
 import java.util.Scanner;
 
 public class Cycle {
