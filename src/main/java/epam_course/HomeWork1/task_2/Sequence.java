@@ -1,4 +1,4 @@
-package main.java.resources.HomeWork1.task_2;
+package main.java.epam_course.HomeWork1.task_2;
 
 public class Sequence {
 

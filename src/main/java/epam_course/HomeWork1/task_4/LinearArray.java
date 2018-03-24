@@ -1,4 +1,4 @@
-package main.java.resources.HomeWork1.task_4;
+package main.java.epam_course.HomeWork1.task_4;
 import java.util.Scanner;
 
 public class LinearArray {

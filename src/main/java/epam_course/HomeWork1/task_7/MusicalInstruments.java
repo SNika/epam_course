@@ -1,6 +1,6 @@
-package main.java.resources.HomeWork1.task_7;
+package main.java.epam_course.HomeWork1.task_7;
 
-abstract class MusicalInstruments{
+public abstract class MusicalInstruments{
 
     static {
         System.out.println("Musical instruments:");

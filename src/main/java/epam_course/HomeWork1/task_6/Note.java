@@ -1,4 +1,4 @@
-package main.java.resources.HomeWork1.task_6;
+package main.java.epam_course.HomeWork1.task_6;
 
 import java.util.Scanner;
 
