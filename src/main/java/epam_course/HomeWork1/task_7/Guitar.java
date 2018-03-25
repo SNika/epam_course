@@ -11,15 +11,15 @@ public class Guitar extends StringedInstruments{ //наследование
     }
 
     @Override
-    public String sound() { //полиморфизм
-        return "Trin-trin-trin";
+    public void sound() { //полиморфизм
+        System.out.println("Trin-trin-trin");
     }
 
     private String defenition="The guitar is a fretted musical instrument that usually has six strings."; //инкапсуляция
 
     @Override
-    public String description(){
-        return this.defenition;
+    public void description(){
+        System.out.println(this.defenition);
     }
 
 }

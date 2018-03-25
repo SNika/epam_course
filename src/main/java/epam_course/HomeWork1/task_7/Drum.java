@@ -10,4 +10,9 @@ public class Drum extends DrumsInstruments{//наследование
         super(color);
     }
 
+    @Override
+    public void sound(){
+        System.out.println("Bam-bam-bam");
+    }
+
 }

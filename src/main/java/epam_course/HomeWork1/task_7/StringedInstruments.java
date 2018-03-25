@@ -7,17 +7,15 @@ public class StringedInstruments extends MusicalInstruments{ //наследов�
     }
 
     public StringedInstruments(String color) {
-
         super(color);
     }
 
-    public String sound() {
-
-        return "Trinnn";
+    public void sound() {
+        System.out.println("Trinnn");
     }
 
-    String description() {
-        return "This is Stringed Instruments";
+    public void description() {
+        System.out.println("This is a class of Stringed Instruments");
     }
 
 }

@@ -10,12 +10,15 @@ public abstract class MusicalInstruments{
         System.out.println("The color is "+color);
     }
 
-    abstract String sound();
+    abstract void sound();
 
-    abstract String description();
+    abstract void description();
 
-    public int price(int price){
-        return price;
+    public static final double currencyRate=68.7;
+    public void priceInRubles(double priceInDollars){
+        double priceInRubbles;
+        priceInRubbles=priceInDollars*currencyRate;
+        System.out.println("Price: "+priceInRubbles+" RUB");
     }
 
 }

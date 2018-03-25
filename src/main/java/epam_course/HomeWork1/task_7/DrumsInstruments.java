@@ -10,16 +10,16 @@ public class DrumsInstruments extends MusicalInstruments{ //наследован
         super("green");
     }
 
-    public String sound() {
-        return "Bammm";
+    public void sound() {
+        System.out.println("Bammm");
     }
 
     private String definition="Drums are the world's oldest and most ubiquitous musical instruments, " +
             "and the basic design has remained virtually unchanged for thousands of years."; //инкапсуляция
 
     @Override
-    String description() {
-        return this.definition;
+    void description() {
+        System.out.println(this.definition);
     }
 
 }
