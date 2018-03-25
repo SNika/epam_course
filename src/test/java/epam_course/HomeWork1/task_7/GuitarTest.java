@@ -1,11 +1,13 @@
-package test.java.epam_course.HomeWork1.task_7;
+package java.epam_course.HomeWork1.task_7;
 
 import main.java.epam_course.HomeWork1.task_7.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static main.java.epam_course.HomeWork1.task_7.MusicalInstruments.currencyRate;
+import static org.junit.Assert.assertEquals;
+
 
 public class GuitarTest {
     private Guitar guitar;
@@ -28,6 +30,7 @@ public class GuitarTest {
 
     @Test
     public void checkMethodPriceReturnedInt(){
-        assertEquals(200, guitar.price(200));
+        assertEquals(400*currencyRate, guitar.priceInRubles(400));
     }
+
 }
